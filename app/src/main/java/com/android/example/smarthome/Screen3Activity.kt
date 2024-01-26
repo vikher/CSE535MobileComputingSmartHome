@@ -42,6 +42,8 @@ import retrofit2.http.Part
 import java.io.File
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
+import android.app.ProgressDialog
+
 // Define the API interface
 interface ApiService {
     @Multipart
@@ -61,6 +63,7 @@ class Screen3Activity : AppCompatActivity() {
     private val userLastName = "HERNANDEZ-SANCHEZ"
     private val BASE_URL = "http://192.168.1.184:5000/"
     private val REQUEST_CODE_PERMISSIONS = 10
+    private var progressDialog: ProgressDialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -150,6 +153,10 @@ class Screen3Activity : AppCompatActivity() {
     }
 
     private fun uploadVideos() {
+        progressDialog = ProgressDialog(this)
+        progressDialog?.setMessage("Uploading...")
+        progressDialog?.setCancelable(false)
+        progressDialog?.show()
         val realPath = getRealPathFromURI(this, uri)
         val videoFile = File(realPath)
 
@@ -166,16 +173,19 @@ class Screen3Activity : AppCompatActivity() {
             apiService.uploadVideo(filePart).enqueue(getUploadCallback())
         } ?: run {
             showToast("File not found")
+            progressDialog?.dismiss()
         }
     }
 
     private fun getUploadCallback(): Callback<UploadResponse> {
         return object : Callback<UploadResponse> {
             override fun onResponse(call: Call<UploadResponse>, response: Response<UploadResponse>) {
+                progressDialog?.dismiss()
                 handleResponse(response)
             }
 
             override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
+                progressDialog?.dismiss()
                 showToast("Upload failed: ${t.message}")
             }
         }
