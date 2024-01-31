@@ -60,7 +60,7 @@ class Screen3Activity : AppCompatActivity() {
     private lateinit var cameraExecutor: ExecutorService
     private lateinit var uri: Uri
     private var selectedGesture: String? = null
-    private val userLastName = "HERNANDEZ-SANCHEZ"
+    private val userLastName = "HERNANDEZ_SANCHEZ"
     private val BASE_URL = "http://192.168.1.184:5000/"
     private val REQUEST_CODE_PERMISSIONS = 10
     private var progressDialog: ProgressDialog? = null
@@ -121,7 +121,7 @@ class Screen3Activity : AppCompatActivity() {
                         Handler(Looper.getMainLooper()).postDelayed({
                             recording?.stop()
                             recording = null
-                        }, 5000)
+                        }, 6000)
                     }
                     is VideoRecordEvent.Finalize -> {
                         if (!recordEvent.hasError()) {

@@ -55,23 +55,23 @@ class Screen2Activity : AppCompatActivity() {
     private fun getVideoPathForGesture(gesture: String?): String {
         // Map gestures to video resource IDs
         val videoResourceId = when (gesture) {
-            "Turn on lights" -> R.raw.lighton
-            "Turn off lights" -> R.raw.lightoff
-            "Turn on fan" -> R.raw.fanon
-            "Turn off fan" -> R.raw.fanoff
-            "Increase fan speed" -> R.raw.increasefanspeed
-            "Decrease fan speed" -> R.raw.decreasefanspeed
-            "Set Thermostat to specified temperature" -> R.raw.setthermo
-            "Gesture for digit 0" -> R.raw.zero
-            "Gesture for digit 1" -> R.raw.one
-            "Gesture for digit 2" -> R.raw.two
-            "Gesture for digit 3" -> R.raw.three
-            "Gesture for digit 4" -> R.raw.four
-            "Gesture for digit 5" -> R.raw.five
-            "Gesture for digit 6" -> R.raw.six
-            "Gesture for digit 7" -> R.raw.seven
-            "Gesture for digit 8" -> R.raw.eight
-            "Gesture for digit 9" -> R.raw.nine
+            "Turn_On_Light" -> R.raw.lighton
+            "Turn_Off_Light" -> R.raw.lightoff
+            "Turn_On_Fan" -> R.raw.fanon
+            "Turn_Off_Fan" -> R.raw.fanoff
+            "Increase_Fan_Speed" -> R.raw.increasefanspeed
+            "Decrease_Fan_Speed" -> R.raw.decreasefanspeed
+            "Set_Thermostat_To_Specified_Temperature" -> R.raw.setthermo
+            "Num0" -> R.raw.zero
+            "Num1" -> R.raw.one
+            "Num2" -> R.raw.two
+            "Num3" -> R.raw.three
+            "Num4" -> R.raw.four
+            "Num5" -> R.raw.five
+            "Num6" -> R.raw.six
+            "Num7" -> R.raw.seven
+            "Num8" -> R.raw.eight
+            "Num9" -> R.raw.nine
             else -> R.raw.zero// Default video resource ID
         }
 

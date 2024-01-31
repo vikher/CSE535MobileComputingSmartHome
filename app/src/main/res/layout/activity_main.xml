@@ -8,12 +8,23 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select a gesture to continue"
+        android:layout_gravity="center"
+        android:textSize="18sp"
+        android:textColor="@android:color/holo_purple"
+        android:layout_marginBottom="46dp" />
+
     <Spinner
         android:id="@+id/gestureSpinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:entries="@array/gesture_list" />
+        android:entries="@array/gesture_list"
+        android:layout_marginBottom="16dp" />
 
     <Button
         android:id="@+id/nextButton"

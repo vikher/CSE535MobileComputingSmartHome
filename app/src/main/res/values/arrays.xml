@@ -1,22 +1,22 @@
 <!-- arrays.xml -->
 <resources>
     <string-array name="gesture_list">
-        <item>Turn on lights</item>
-        <item>Turn off lights</item>
-        <item>Turn on fan</item>
-        <item>Turn off fan</item>
-        <item>Increase fan speed</item>
-        <item>Decrease fan speed</item>
-        <item>Set Thermostat to specified temperature</item>
-        <item>Gesture for digit 0</item>
-        <item>Gesture for digit 1</item>
-        <item>Gesture for digit 2</item>
-        <item>Gesture for digit 3</item>
-        <item>Gesture for digit 4</item>
-        <item>Gesture for digit 5</item>
-        <item>Gesture for digit 6</item>
-        <item>Gesture for digit 7</item>
-        <item>Gesture for digit 8</item>
-        <item>Gesture for digit 9</item>
+        <item>Turn_On_Light</item>
+        <item>Turn_Off_Light</item>
+        <item>Turn_On_Fan</item>
+        <item>Turn_Off_Fan</item>
+        <item>Increase_Fan_Speed</item>
+        <item>Decrease_Fan_Speed</item>
+        <item>Set_Thermostat_To_Specified_Temperature</item>
+        <item>Num0</item>
+        <item>Num1</item>
+        <item>Num2</item>
+        <item>Num3</item>
+        <item>Num4</item>
+        <item>Num5</item>
+        <item>Num6</item>
+        <item>Num7</item>
+        <item>Num8</item>
+        <item>Num9</item>
     </string-array>
 </resources>

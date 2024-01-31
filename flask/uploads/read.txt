@@ -1,1 +1,8 @@
-This is where videos will be uploaded
+Navigate to the project directory.
+
+cd D:\SmartHome\flask
+
+Running the Local Server
+Execute the following command to run the Flask app.
+
+python app.py
